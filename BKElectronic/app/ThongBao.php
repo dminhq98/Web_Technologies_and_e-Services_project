@@ -1,0 +1,12 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class ThongBao extends Model
+{
+    //
+    protected $table = "thong_bao";
+    public $timestamps = false;
+}

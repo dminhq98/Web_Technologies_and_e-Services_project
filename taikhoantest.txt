@@ -1,0 +1,11 @@
+password:matkhau với tất cả tài khoản.
+Tên đăng nhập     			Loại TK			Chú thích
+root						admin			TK gốc ko xóa đc
+tranvien98@gmail.com		admin			TK admin
+tranvan98@gmail.com			admin			Tk admin
+VT3							Văn thư			Văn thư tiểu học
+VT17      					Văn thư			Văn thư trung học
+GV20						Giáo viên       Giáo viên trung học
+GV41						Giáo viên       Giáo viên tiểu học
+HS5							Học sinh        Học sinh trung học
+
