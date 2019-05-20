@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b41dbb18-e860-4b7d-8b98-5580be8bfd89" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VanThuController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VanThuController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/web.config" beforeDir="false" afterPath="$PROJECT_DIR$/public/web.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiem.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiem.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/giaovien/page/themdiem.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/giaovien/page/themdiem.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +20,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="529">
+            <state relative-caret-position="274">
               <caret line="74" column="58" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="58" />
             </state>
           </provider>
@@ -29,9 +29,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3145">
-              <caret line="67" column="66" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="66" />
+            <state relative-caret-position="597">
+              <caret line="281" column="35" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="35" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/detaldanhgia.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-202" />
           </provider>
         </entry>
       </file>
@@ -48,8 +55,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/admin/page/themtruong.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Middleware/AdminLoginMiddleware.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/page/dstruong.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/truong/suatruong.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/truong/themlop.blade.php" />
@@ -81,7 +86,6 @@
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/layout/header.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/giaovien/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/GiaoVienLoginMiddleware.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/HocSinhLoginMiddleware.php" />
         <option value="$PROJECT_DIR$/app/Http/Middleware/VanThuLoginMiddleware.php" />
@@ -99,6 +103,9 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/public/web.config" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/VanThuController.php" />
+        <option value="$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiem.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/giaovien/page/themdiem.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php" />
       </list>
     </option>
   </component>
@@ -199,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,12 +250,28 @@
             <path>
               <item name="BKElectronic" type="b2602c69:ProjectViewProjectNode" />
               <item name="BKElectronic" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BKElectronic" type="b2602c69:ProjectViewProjectNode" />
               <item name="BKElectronic" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BKElectronic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BKElectronic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="giaovien" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="BKElectronic" type="b2602c69:ProjectViewProjectNode" />
+              <item name="BKElectronic" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="giaovien" type="462c0819:PsiDirectoryNode" />
+              <item name="page" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BKElectronic" type="b2602c69:ProjectViewProjectNode" />
@@ -260,6 +282,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -330,16 +353,18 @@
       <workItem from="1558161390211" duration="23037000" />
       <workItem from="1558190224370" duration="999000" />
       <workItem from="1558350905048" duration="456000" />
+      <workItem from="1558353131830" duration="1758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278542000" />
+    <option name="totallyTimeSpent" value="280300000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25113463" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2549168" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -387,34 +412,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/page/suamon.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="17" column="31" selection-start-line="16" selection-start-column="3" selection-end-line="17" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vanthu/hocsinh/themhocsinh.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="10" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="21" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_05_17_160652_create_admin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="25" column="35" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/page/doimatkhau.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="10" selection-start-line="51" selection-start-column="10" selection-end-line="51" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/layout/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -595,11 +592,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiem.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-811" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vanthu/page/detalthongbao.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -757,17 +749,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiemc1.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-255" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/themdiem.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="31" column="146" selection-start-line="31" selection-start-column="146" selection-end-line="31" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/detalnhapdiem.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="30" column="146" selection-start-line="30" selection-start-column="93" selection-end-line="30" selection-end-column="146" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/nhapdanhgia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/giaovien/page/detaldanhgia.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-202" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="529">
+        <state relative-caret-position="274">
           <caret line="74" column="58" selection-start-line="74" selection-start-column="49" selection-end-line="74" selection-end-column="58" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/GiaoVienController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3145">
-          <caret line="67" column="66" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="66" />
+        <state relative-caret-position="597">
+          <caret line="281" column="35" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="35" />
         </state>
       </provider>
     </entry>

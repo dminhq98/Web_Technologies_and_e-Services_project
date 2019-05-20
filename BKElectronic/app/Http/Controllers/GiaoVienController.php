@@ -252,6 +252,112 @@ class GiaoVienController extends Controller
                         $diemphay->diem=round($diem, 2);
                         $diemphay->save();
                     }
+                    $bangdiem1 = BangDiem::where('id_danh_sach_bd', $dsbd['id'])->get();
+                    $tong = 0;
+                    $i = 0;
+                    $gioi = 0;
+                    $kha = 0;
+                    $tb = 0;
+                    $yeu = 0;
+                    $temp1 = 0;
+                    $temp2 = 0;
+                    $temp3 = 0;
+                    $temp4 = 0;
+                    foreach ($bangdiem1 as $bd) {
+                        $mon = MonHoc::find($bd['id_mon']);
+                        if ($mon['ten_mon'] == "Toán" or $mon['ten_mon'] == "Văn") {
+                            $diemphay = DiemPhay::where('id_bangdiem', $bd['id'])->first();
+                            $tong += $diemphay['diem'];
+                            $i++;
+                            if ($diemphay['diem'] >= 8) {
+                                if ($temp1 == 0) {
+                                    $gioi = $gioi + 2;
+                                    $temp1 = 1;
+                                }
+                            } elseif ($diemphay['diem'] >= 6.5) {
+                                if (temp2 == 0) {
+                                    $kha = $kha + 2;
+                                    $temp2 = 1;
+                                }
+                            } elseif ($diemphay['diem'] >= 5.0) {
+
+                                if (temp3 == 0) {
+                                    $tb = $tb + 2;
+                                    $temp3 = 1;
+                                }
+                            } elseif ($diemphay['diem'] >= 3.5) {
+                                if (temp4 == 0) {
+                                    $yeu = $yeu + 2;
+                                    $temp4 = 1;
+                                }
+                            }
+
+                        } else {
+                            $diemphay = DiemPhay::where('id_bangdiem', $bd['id'])->first();
+                            $tong += $diemphay['diem'];
+                            $i++;
+                            if ($diemphay['diem'] >= 6.5) {
+                                $gioi++;
+                            } elseif ($diemphay['diem'] >= 5.0) {
+                                $kha++;
+                            } elseif ($diemphay['diem'] >= 3.5) {
+                                $tb++;
+                            } elseif ($diemphay['diem'] >= 2.0) {
+                                $yeu++;
+                            }
+                        }
+                    }
+
+                        if ($i == 0) {
+                            $tongket->diem_phay_cuoi = null;
+                            $diem=null;
+                        } else {
+                            $diem = round($tong / $i, 1);
+                            $tongket->diem_phay_cuoi = $diem;
+                        }
+                        if ($diem > 8) {
+                            if ($gioi == $i) {
+                                $tongket->hoc_luc = "Giỏi";
+                            } elseif ($kha == $i) {
+                                $tongket->hoc_luc = "Khá";
+                            } elseif ($tb == $i) {
+                                $tongket->hoc_luc = "Trung Bình";
+                            } elseif ($yeu == $i) {
+                                $tongket->hoc_luc = "Yếu";
+                            } else {
+                                $tongket->hoc_luc = "Kém";
+                            }
+                        } elseif ($diem > 6.5) {
+                            if ($kha == $i) {
+                                $tongket->hoc_luc = "Khá";
+                            } elseif ($tb == $i) {
+                                $tongket->hoc_luc = "Trung Bình";
+                            } elseif ($yeu == $i) {
+                                $tongket->hoc_luc = "Yếu";
+                            } else {
+                                $tongket->hoc_luc = "Kém";
+                            }
+                        } elseif ($diem > 5.0) {
+                            if ($tb == $i) {
+                                $tongket->hoc_luc = "Trung Bình";
+                            } elseif ($yeu == $i) {
+                                $tongket->hoc_luc = "Yếu";
+                            } else {
+                                $tongket->hoc_luc = "Kém";
+                            }
+                        } elseif ($diem > 3.5) {
+                            if ($yeu == $i) {
+                                $tongket->hoc_luc = "Yếu";
+                            } else {
+                                $tongket->hoc_luc = "Kém";
+                            }
+                        }
+                        if($diem==null){
+                            $tongket->hoc_luc = null;
+                        }
+                        $tongket->save();
+
+
                 }
                 return view('giaovien.page.detalnhapdiem',['hocsinh'=>$hocsinh,'id_lop'=>$id_lop,'id_giaovien'=>$id_giaovien]);
 

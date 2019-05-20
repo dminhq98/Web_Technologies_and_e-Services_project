@@ -22,13 +22,14 @@
     @endif
     <?php
     $u="giaovien/nhapdiem/$id_lop/$id_giaovien";
+    $giaovien=\App\GiaoVien::find($id_giaovien);
     ?>
 
     <div class="panel-body">
         <form role="form" action="{{ url($u) }}" method="PUT">
             {!! csrf_field() !!}
             <table class="table table-bordered">
-                <caption style="text-align: center; font-size: 15px; font-weight: bold;">Môn Toán</caption>
+                <caption style="text-align: center; font-size: 15px; font-weight: bold;">Môn {{\App\MonHoc::find($giaovien['id_mon'])['ten_mon']}}</caption>
                 <thead>
                 <tr class="info">
                     <th>STT</th>
@@ -41,7 +42,7 @@
                 <tbody>
                 <?php
                 $i=1;
-                $giaovien=\App\GiaoVien::find($id_giaovien);
+
                 ?>
                 @foreach($hocsinh as $hs)
                     <?php
