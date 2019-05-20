@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\BangTongKet;
+use App\DanhSachBD;
 use App\DanhSachGV;
 use App\DanhSachHS;
 use App\GiaoVien;
@@ -434,6 +435,10 @@ class VanThuController extends Controller
         $tongket=new BangTongKet();
         $tongket->id_hocsinh=$hocsinh['id'];
         $tongket->save();
+        $dsbd=new DanhSachBD();
+        $dsbd->id_tongket=$tongket['id'];
+        $dsbd->id_hocki=$hk;
+        $dsbd->save();
         return redirect('vanthu/hocsinh/themhocsinh')->with('thanhcong',"Đã thêm thành công");
     }
     public function suashocsinh($id_hs){
